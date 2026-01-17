@@ -14,14 +14,6 @@ Website portfolio pribadi bertema Programmer & Designer.
 - Tailwind CSS
 - JavaScript
 
-## Fitur
-
-- Dark Mode
-- Filter Project
-- Dynamic Content
-- Form Validation
-- Responsive Design
-
 ## Cara Menjalankan
 
 1. Clone repository
