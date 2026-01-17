@@ -134,3 +134,22 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+     
+    function setName() {
+        const input = document.getElementById("name-input").value;
+        const nameSpan = document.getElementById("user-name");
+
+        if (input.trim() !== "") {
+            nameSpan.textContent = input;
+
+            localStorage.setItem("visitorName", input);
+        }
+    }
+
+    window.onload = function () {
+        const savedName = localStorage.getItem("visitorName");
+
+        if (savedName) {
+            document.getElementById("user-name").textContent = savedName;
+        }
+    };

@@ -5,141 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-gray-50 smooth-scroll">
-    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-3">
-                    <img src="images/logo.png" alt="Logo" class="w-10 h-10 object-contain">
-                    <span class="font-semibold text-gray-800">My Website</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-yellow-500 transition">Home</a>
-                    <a href="#profile" class="nav-link text-gray-700 hover:text-yellow-500 transition">Our Profile</a>
-                    <a href="#home" class="nav-link text-gray-700 hover:text-yellow-500 transition">Portfolio</a>
-                    <a href="#message" class="nav-link text-gray-700 hover:text-yellow-500 transition">Message Us</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+
+<header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="Logo" class="w-10 h-10 object-contain">
+                <span class="font-semibold text-gray-800">Achmad Sofyan</span>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-yellow-500 transition">Home</a>
+                <a href="#profile" class="nav-link text-gray-700 hover:text-yellow-500 transition">Profile</a>
+                <a href="#portfolio" class="nav-link text-gray-700 hover:text-yellow-500 transition">Portfolio</a>
+                <a href="#message" class="nav-link text-gray-700 hover:text-yellow-500 transition">Message Us</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a>
+            <a href="#profile" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Profile</a>
+            <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Portfolio</a>
+            <a href="#message" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Message Us</a>
+        </div>
+    </div>
+</header>
+
+<section id="home" class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center fade-in">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+               Hi <span id="user-name">Gais</span>, Welcome To Website
+            </h1>
+
+            <div class="mt-6">
+                <input 
+                    type="text" 
+                    id="name-input"
+                    placeholder="Masukkan nama kamu..."
+                    class="px-4 py-2 border rounded-md">
+
+                <button 
+                    onclick="setName()"
+                    class="bg-yellow-400 px-4 py-2 rounded-md ml-2">
+                    Simpan Nama
                 </button>
             </div>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a>
-                <a href="#profile" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Our Profile</a>
-                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Portfolio</a>
-                <a href="#message" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Message Us</a>
+            <br>
+            <p class="text-gray-600 text-lg">
+                ini adalah website pertama saya
+            </p>
+        </div>
+
+        <div class="mt-16 flex justify-center">
+            <img src="images/project.png"
+                 alt="Project"
+                 class="w-full max-w-md h-64 object-cover rounded-lg shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- SECTION PROFILE BARU -->
+<section id="profile" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Profil Saya</h2>
+
+        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <p class="mb-4 text-gray-700">
+                Perkenalkan, nama saya <b>Achmad Sofyan</b>.
+                Saya adalah seorang pemula di bidang Web Development yang sedang aktif belajar
+                membangun website menggunakan HTML, CSS, JavaScript, dan Tailwind CSS.
+            </p>
+
+            <p class="mb-4 text-gray-700">
+                Website ini saya buat sebagai portofolio pribadi untuk menampilkan
+                hasil belajar dan project yang telah saya kerjakan selama mengikuti
+                pelatihan Coding Camp.
+            </p>
+
+            <div class="mt-6">
+                <h3 class="font-semibold text-gray-800 mb-3">Informasi Profesional</h3>
+
+                <ul class="list-disc ml-5 text-gray-700 space-y-2">
+                    <li>Bidang: Web Development</li>
+                    <li>Fokus: Frontend Developer</li>
+                    <li>Minat: UI/UX Design & Website Development</li>
+                    <li>Tools: VS Code, Git, GitHub</li>
+                </ul>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="home" class="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center fade-in">
-                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-                    Hi Gais, Welcome To Website
-                </h1>
-                <p class="text-gray-600 text-lg">
-                   ini adalah website pertama saya
-                </p>
+<!-- SECTION PORTFOLIO BARU -->
+<section id="portfolio" class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Portfolio Saya</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+            <div class="bg-white rounded-lg shadow-sm p-4 text-center">
+                <img src="images/tangerang.png" class="w-full h-48 object-cover rounded mb-3">
+                <h3 class="font-semibold text-gray-900">Project Tangerang</h3>
+                <p class="text-sm text-gray-600">Website informasi kota Tangerang</p>
             </div>
-            <div class="mt-16 flex justify-center">
-                <div class="mt-16 flex justify-center">
-                <img src="images/project.png" alt="Project" class="w-full max-w-md h-64 object-cover rounded-lg shadow-lg">
+
+            <div class="bg-white rounded-lg shadow-sm p-4 text-center">
+                <img src="images/jakarta.png" class="w-full h-48 object-cover rounded mb-3">
+                <h3 class="font-semibold text-gray-900">Project Jakarta</h3>
+                <p class="text-sm text-gray-600">Website informasi kota Jakarta</p>
             </div>
+
+            <div class="bg-white rounded-lg shadow-sm p-4 text-center">
+                <img src="images/surabaya.png" class="w-full h-48 object-cover rounded mb-3">
+                <h3 class="font-semibold text-gray-900">Project Surabaya</h3>
+                <p class="text-sm text-gray-600">Website informasi kota Surabaya</p>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-   <section id="profile" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12">Our Headquarter</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                 <div class="text-center fade-in circle-location" style="animation-delay: 0.1s">
-                    <div class="w-32 h-32 mx-auto border-2 border-gray-300 rounded-full mb-4 overflow-hidden bg-gray-50">
-                        <img src="images/tangerang.jpeg" alt="Tangerang" class="w-full h-full object-cover">
+<section id="message" class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">Message Us</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
+                        <input type="text" id="nama" class="w-full px-4 py-2 border border-gray-300 rounded-md" required>
                     </div>
-                    <h3 class="font-semibold text-gray-900">Tangerang</h3>
-                </div>
-                <div class="text-center fade-in circle-location">
-                    <div class="w-32 h-32 mx-auto border-2 border-gray-300 rounded-full mb-4 overflow-hidden bg-gray-50">
-                        <img src="images/jakarta.jpg" alt="Jakarta" class="w-full h-full object-cover">
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tempat Lahir</label>
+                        <input type="text" id="tempat-lahir" class="w-full px-4 py-2 border border-gray-300 rounded-md" required>
                     </div>
-                    <h3 class="font-semibold text-gray-900">Jakarta</h3>
-                </div>
-               
-                <div class="text-center fade-in circle-location" style="animation-delay: 0.2s">
-                    <div class="w-32 h-32 mx-auto border-2 border-gray-300 rounded-full mb-4 overflow-hidden bg-gray-50">
-                        <img src="images/surabaya.jpg" alt="Surabaya" class="w-full h-full object-cover">
+
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Kelamin</label>
+                        <div class="flex items-center space-x-6">
+                            <label class="flex items-center">
+                                <input type="radio" name="gender" value="Laki-Laki" class="mr-2" required>
+                                <span>Laki-Laki</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="gender" value="Perempuan" class="mr-2">
+                                <span>Perempuan</span>
+                            </label>
+                        </div>
                     </div>
-                    <h3 class="font-semibold text-gray-900">Surabaya</h3>
-                </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                        <textarea id="pesan" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md" required></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 rounded-md transition duration-200">
+                        Submit
+                    </button>
+                </form>
             </div>
-        </div>
-    </section>
 
-    <section id="message" class="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12">Message Us</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <form id="contact-form">
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
-                            <input type="text" id="nama" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Tempat Lahir</label>
-                            <input type="text" id="tempat-lahir" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Jenis Kelamin</label>
-                            <div class="flex items-center space-x-6">
-                                <label class="flex items-center">
-                                    <input type="radio" name="gender" value="Laki-Laki" class="mr-2" required>
-                                    <span>Laki-Laki</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="gender" value="Perempuan" class="mr-2">
-                                    <span>Perempuan</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
-                            <textarea id="pesan" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 focus:border-transparent" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 rounded-md transition duration-200">
-                            Submit
-                        </button>
-                    </form>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <div class="border border-gray-300 rounded-lg p-6 h-full">
-                        <div id="preview-content" class="text-sm text-gray-600">
-                            <p class="mb-2"><strong>Current time:</strong> <span id="current-time"></span></p>
-                            <p class="mb-2"><strong>Nama:</strong> <span id="preview-nama">Nama Anda</span></p>
-                            <p class="mb-2"><strong>Tempat Lahir:</strong> <span id="preview-tempat">Tanggal Lahir Anda</span></p>
-                            <p class="mb-2"><strong>Jenis Kelamin:</strong> <span id="preview-gender">Silahkan pilih jenis Kelamin anda</span></p>
-                            <p class="mb-2"><strong>Pesan:</strong> <span id="preview-pesan">Pesan anda akan muncul disini</span></p>
-                        </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <div class="border border-gray-300 rounded-lg p-6 h-full">
+                    <div id="preview-content" class="text-sm text-gray-600">
+                        <p class="mb-2"><strong>Current time:</strong> <span id="current-time"></span></p>
+                        <p class="mb-2"><strong>Nama:</strong> <span id="preview-nama">Nama Anda</span></p>
+                        <p class="mb-2"><strong>Tempat Lahir:</strong> <span id="preview-tempat">Tanggal Lahir Anda</span></p>
+                        <p class="mb-2"><strong>Jenis Kelamin:</strong> <span id="preview-gender">Silahkan pilih jenis Kelamin anda</span></p>
+                        <p class="mb-2"><strong>Pesan:</strong> <span id="preview-pesan">Pesan anda akan muncul disini</span></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <footer class="bg-white py-6 px-4 sm:px-6 lg:px-8 border-t">
-        <div class="max-w-7xl mx-auto text-center text-gray-600 text-sm">
-            Created By Achmad Sofyan
         </div>
-    </footer>
+    </div>
+</section>
+
+<footer class="bg-white py-6 px-4 sm:px-6 lg:px-8 border-t">
+    <div class="max-w-7xl mx-auto text-center text-gray-600 text-sm">
+        Created By Achmad Sofyan
+    </div>
+</footer>
 
 <script src="js/script.js"></script>
 </body>
